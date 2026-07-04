@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Custom colors if any, moss green and earth tones */
+  --color-moss-50: #f4f6f3;
+  --color-moss-100: #e6ebe3;
+  --color-moss-200: #cbd6cb;
+  --color-moss-300: #a7b7a7;
+  --color-moss-400: #829e82;
+  --color-moss-500: #5c6e58;
+  --color-moss-600: #495746;
+  --color-moss-700: #3b4638;
+  --color-moss-800: #2b3329;
+  --color-moss-900: #1b201a;
+  --color-moss-950: #0f120e;
+}
+
+/* Custom transitions and scroll animations */
+.animate-spin-slow {
+  animation: spin 12s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

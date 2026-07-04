@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bg-grad" cx="80%" cy="20%" r="90%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#fbfbfb" />
+      <stop offset="100%" stop-color="#f4f4f4" />
+    </radialGradient>
+
+    <!-- Curve Shadow Gradient -->
+    <linearGradient id="shadow-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b5b5b5" stop-opacity="0.75" />
+      <stop offset="45%" stop-color="#dadada" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Curve Highlight Gradient -->
+    <linearGradient id="highlight-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+      <stop offset="70%" stop-color="#fafafa" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Extreme blur filter for plaster look -->
+    <filter id="ultra-blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="120" />
+    </filter>
+    <filter id="soft-blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="70" />
+    </filter>
+  </defs>
+
+  <!-- Base background -->
+  <rect width="1920" height="1080" fill="url(#bg-grad)" />
+
+  <!-- Soft shadow sweep (the bottom left dark sweep) -->
+  <ellipse cx="100" cy="1000" rx="1100" ry="600" fill="url(#shadow-grad)" filter="url(#ultra-blur)" />
+  
+  <!-- Additional sweep for smooth depth -->
+  <path d="M -100 1180 C 250 680, 950 820, 1450 1180 Z" fill="url(#shadow-grad)" filter="url(#ultra-blur)" opacity="0.9" />
+
+  <!-- Soft bright crest/wave overlay to define the curve -->
+  <path d="M -200 1180 C 50 630, 750 720, 1250 1180 Z" fill="url(#highlight-grad)" filter="url(#soft-blur)" />
+</svg>

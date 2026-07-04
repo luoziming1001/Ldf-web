@@ -1,0 +1,6 @@
+{
+  "name": "骆东方个人设计作品集",
+  "description": "骆东方 (Ziming) 3C数码、高端美妆与奢侈品三维精细化渲染及视觉设计个人作品集，支持 IndexedDB 交互式图片定制与多维视觉呈现。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
